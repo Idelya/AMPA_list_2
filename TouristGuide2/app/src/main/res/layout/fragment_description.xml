@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="top|center"
+    android:gravity="center_horizontal"
     tools:context=".details.DescriptionFragment">
 
     <TextView
@@ -21,7 +21,7 @@
     <ImageView
         android:id="@+id/mainImage"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="210dp"
         android:layout_marginTop="@dimen/text_margin"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 

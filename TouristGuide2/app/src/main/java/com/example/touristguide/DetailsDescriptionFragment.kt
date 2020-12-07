@@ -36,9 +36,9 @@ class DetailsDescriptionFragment : Fragment() {
         val tabs: TabLayout = view.findViewById(R.id.tab_layout)
         TabLayoutMediator(tabs, pager) { tab, position ->
             when (position) {
-                0 -> tab.text="Description"
-                1 -> tab.text="Gallery"
-                else ->  tab.text="Worth seeing"
+                0 -> tab.setText(R.string.description)
+                1 -> tab.setText(R.string.gallery)
+                else ->  tab.setText(R.string.worth_seeing)
             }
         }.attach()
 

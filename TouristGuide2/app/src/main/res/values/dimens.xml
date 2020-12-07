@@ -7,6 +7,6 @@
     <dimen name="preiew_with">94dp</dimen>
     <dimen name="preiew_height">104dp</dimen>
     <dimen name="text_size_header">20sp</dimen>
-    <dimen name="text_size_title">16sp</dimen>
+    <dimen name="text_size_title">13sp</dimen>
     <dimen name="text_size">10sp</dimen>
 </resources>
