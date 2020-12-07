@@ -3,10 +3,12 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="text_margin_small">8dp</dimen>
     <dimen name="text_margin_big">32dp</dimen>
+    <dimen name="text_margin_xl">48dp</dimen>
     <dimen name="image_margin">3dp</dimen>
     <dimen name="preiew_with">94dp</dimen>
     <dimen name="preiew_height">104dp</dimen>
     <dimen name="text_size_header">20sp</dimen>
-    <dimen name="text_size_title">13sp</dimen>
+    <dimen name="text_size_title">16sp</dimen>
     <dimen name="text_size">10sp</dimen>
+    <dimen name="text_height">28dp</dimen>
 </resources>

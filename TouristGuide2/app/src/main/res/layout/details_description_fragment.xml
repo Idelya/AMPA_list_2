@@ -17,9 +17,10 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
         android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/text_margin_xl"
         app:layout_constraintTop_toBottomOf="@id/tab_layout"
         tools:ignore="MissingConstraints"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
     <Button
         android:id="@+id/backButton"
