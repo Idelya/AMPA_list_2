@@ -38,6 +38,10 @@ class AttractionsFragment : Fragment() {
             attraction -> if(attraction!=null) openDetailsOfAttraction()
         })
 
+        viewModel.favourites.observe(viewLifecycleOwner, Observer<Int> {
+                (view.adapter as AttractionsListAdapter).notifyDataSetChanged()
+        })
+
         (view.adapter as AttractionsListAdapter).setNewListener(object : AttractionsListAdapter.ItemListener {
             override fun onItemClick(item: AttractionModel?) {
                 if (item != null) {
@@ -46,7 +50,7 @@ class AttractionsFragment : Fragment() {
             }
             override fun onFavouriteClick(item: AttractionModel) {
                 if (item != null) {
-                    viewModel.removeItem(item)
+                    viewModel.toggleFavourite(item)
                 }
             }
         } )

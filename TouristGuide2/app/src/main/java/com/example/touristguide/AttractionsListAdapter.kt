@@ -74,5 +74,4 @@ class DiffCallback: DiffUtil.ItemCallback<AttractionModel>() {
     override fun areContentsTheSame(oldItem: AttractionModel, newItem: AttractionModel): Boolean {
         return oldItem.name == newItem.name && oldItem.category == newItem.category && oldItem.isFavourite == newItem.isFavourite
     }
-
 }

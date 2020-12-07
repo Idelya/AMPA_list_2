@@ -10,6 +10,7 @@ class AttractionsListViewModel: ViewModel()  {
 
     var _attractionsList: MutableLiveData<List<AttractionModel>> = MutableLiveData(attractions_list_static)
     private val _current_details = MutableLiveData<AttractionModel>()
+    private val _favourites = MutableLiveData<Int>(countFavourites())
 
     val attractionsList: LiveData<List<AttractionModel>>
         get() = _attractionsList
@@ -17,8 +18,12 @@ class AttractionsListViewModel: ViewModel()  {
     val current_details: LiveData<AttractionModel>
         get() = _current_details
 
+    val favourites: LiveData<Int>
+        get() = _favourites
+
     fun toggleFavourite(attraction: AttractionModel) {
         attraction.toggleFavourite()
+        _favourites.value = countFavourites()
     }
 
     fun removeItem(attraction: AttractionModel) {
@@ -31,5 +36,9 @@ class AttractionsListViewModel: ViewModel()  {
 
     fun clearDetails() {
         _current_details.value = null
+    }
+
+    fun countFavourites(): Int? {
+        return _attractionsList.value?.count { attraction -> attraction.isFavourite }
     }
 }
